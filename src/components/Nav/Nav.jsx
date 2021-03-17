@@ -1,19 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 const Nav = () => {
    return (
       <NavStyle>
-         <h1><a href='#'>Capture</a></h1>
+         <h1><Link to='/'>Capture</Link></h1>
          <ul>
             <li>
-               <a href='#'>1. About Us</a>
+               <Link to='/'>1. About Us</Link>
             </li>
             <li>
-               <a href='#'>2. Our Work</a>
+               <Link to='/work'>2. Our Work</Link>
             </li>
             <li>
-               <a href='#'>3. Contact Us</a>
+               <Link to='/contact'>3. Contact Us</Link>
             </li>
          </ul>
       </NavStyle>
@@ -32,13 +33,13 @@ const NavStyle = styled.nav`
    a{
       color: white;
       text-decoration: none;
+      font-size: 1.5rem;
    }
    ul{
       display:flex;
       list-style:none;
    }
    h1{
-      font-size: 1.5rem;
       font-family: 'lobster', cursive;
       font-weight: lighter;
    }

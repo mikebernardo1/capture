@@ -9,7 +9,7 @@ import home2 from '../../assets/images/home2.jpg';
 
 const Services = () => {
    return (
-      <div>
+      <div className='services'>
          <div className="description">
             <h2>High<span>quality</span> services</h2>
             <div className="cards">

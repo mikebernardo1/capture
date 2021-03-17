@@ -2,7 +2,7 @@ import React from 'react'
 
 const FAQ = () => {
    return (
-      <div>
+      <div className='faq'>
          <h2>Any questions <span>FAQ</span></h2>
          <div className="question">
             <h4>How do I start?</h4>

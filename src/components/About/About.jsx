@@ -5,6 +5,7 @@ import home1 from '../../assets/images/home1.jpg'
 import './About.scss';
 
 import styled from 'styled-components';
+import {AboutStyle, DescriptionStyle, ImageStyle, HideStyle} from '../../styles/styles';
 
 const About = () => {
    return (
@@ -31,36 +32,5 @@ const About = () => {
       </AboutStyle>
    )
 }
-
-const AboutStyle = styled.div`
-   min-height: 90vh;
-   display: flex;
-   align-items:center;
-   justify-content: center;
-   padding: 5rem 10rem;
-   color:white;
-`
-
-const DescriptionStyle = styled.div`
-   flex: 1;
-   padding-right: 5rem;
-   h2{
-      font-weight: lighter;
-   }
-`
-
-const ImageStyle = styled.div`
-   flex: 1;
-   overflow: hidden;
-   img{
-      width:100%;
-      height: 80vh;
-      object-fit: cover;
-   }
-`
-
-const HideStyle = styled.div`
-   overflow:hidden;
-`
 
 export default About;

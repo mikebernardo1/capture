@@ -16,7 +16,7 @@ router
 
 router
 .get('/:id', (req, res) => {
-let moviesID = movie.find((movie)=> movie.id == req.params.id);
+let moviesID = movies.find((movie)=> movie.id == req.params.id);
 return res.send(moviesID);
 })
 

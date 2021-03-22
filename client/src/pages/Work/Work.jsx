@@ -4,14 +4,6 @@ import {Link} from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 
-import athlete from '../../assets/images/athlete-small.png';
-import athlete2 from '../../assets/images/athlete2.png';
-import theracer from '../../assets/images/theracer-small.png';
-import theracer2 from '../../assets/images/the-racer2.jpeg';
-import goodtimes from '../../assets/images/goodtimes-small.png';
-import goodtimes2 from '../../assets/images/good-times2.jpeg';
-
-
 const Work = () => {
 
    const [movies, setMovies] = useState({data:[]})

@@ -6,23 +6,27 @@ import './About.scss';
 
 import styled from 'styled-components';
 import {AboutStyle, DescriptionStyle, ImageStyle, HideStyle} from '../../styles/styles';
+import {motion} from 'framer-motion';
 
 const About = () => {
+
    return (
       <AboutStyle>
          <DescriptionStyle>
-            <div className="title">
+            <motion.div>
                <HideStyle>
-                  <h2>We work to make</h2>
+                  <motion.h2>
+                     We work to make
+                  </motion.h2>
                </HideStyle>
                <HideStyle>
-                  <h2>your <span>dreams</span> come
-                  </h2>
+                  <motion.h2>your <span>dreams</span> come
+                  </motion.h2>
                </HideStyle>
                <HideStyle>
-                  <h2>true.</h2>
+                  <motion.h2>true.</motion.h2>
                </HideStyle>
-            </div>
+            </motion.div>
             <p>Contact us for any photography or videography ideas that you have. We have professionals with amazing skills.</p>
             <button>Contact Us</button>
          </DescriptionStyle>

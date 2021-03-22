@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
+
+
+import {motion} from 'framer-motion';
+import {pageAnimation} from '../../animation';
 
 const Work = () => {
 
@@ -14,7 +17,13 @@ const Work = () => {
    },[])
 
    return (
-      <WorkStyle>
+      <WorkStyle 
+      exit='exit'
+      variants={pageAnimation} 
+      initial='hidden' 
+      animate='show'
+      style={{background:'#ffffff'}}
+      >
          {movies.data.map(movie=>(
             <MovieStyle key={movie.id}>
                <h2>{movie.title}</h2>
@@ -29,7 +38,7 @@ const Work = () => {
    )
 }
 
-const WorkStyle = styled.div`
+const WorkStyle = styled(motion.div)`
    min-height: 100vh;
    overflow: hidden;
    padding: 5rem 10rem;

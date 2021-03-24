@@ -1,44 +1,40 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import {AboutStyle, DescriptionStyle, ImageStyle, HideStyle} from '../../styles/styles';
+import {AboutStyle} from '../../styles/styles';
+import Toggle from '../Toggle/Toggle';
+import {AnimateSharedLayout} from 'framer-motion';
 
 const FAQ = () => {
    return (
       <FAQStyle>
          <h2>Any questions <span>FAQ</span></h2>
-         <div className="question">
-            <h4>How do I start?</h4>
-            <div className="answer">
-               <p>Lorem ipsum dolor sit amet.</p>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</p>
-            </div>
-            <div className="faq-line"></div>
-         </div>
-         <div className="question">
-            <h4>Daily Schedule</h4>
-            <div className="answer">
-               <p>Lorem ipsum dolor sit amet.</p>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</p>
-            </div>
-            <div className="faq-line"></div>
-         </div>
-         <div className="question">
-            <h4>Different payment methods</h4>
-            <div className="answer">
-               <p>Lorem ipsum dolor sit amet.</p>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</p>
-            </div>
-            <div className="faq-line"></div>
-         </div>
-         <div className="question">
-            <h4>What products do you offer?</h4>
-            <div className="answer">
-               <p>Lorem ipsum dolor sit amet.</p>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</p>
-            </div>
-            <div className="faq-line"></div>
-         </div>
+         <AnimateSharedLayout>
+            <Toggle title="How Do I Start?">
+               <div className="answer">
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</p>
+               </div>
+            </Toggle>
+            <Toggle title="Daily Schedule">
+               <div className="answer">
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</p>
+               </div>
+            </Toggle>
+            <Toggle title="Different payment methods">
+               <div className="answer">
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</p>
+               </div>
+            </Toggle>
+            <Toggle title="What products do you offer?">
+               <div className="answer">
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, impedit.</p>
+               </div>
+            </Toggle>
+         </AnimateSharedLayout>
       </FAQStyle>
    )
 }

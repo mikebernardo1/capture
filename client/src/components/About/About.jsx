@@ -4,7 +4,6 @@ import home1 from '../../assets/images/home1.jpg'
 
 import './About.scss';
 
-import styled from 'styled-components';
 import {AboutStyle, DescriptionStyle, ImageStyle, HideStyle} from '../../styles/styles';
 import {motion} from 'framer-motion';
 import {titleAnimation, photoAnimation, fade} from '../../animation';

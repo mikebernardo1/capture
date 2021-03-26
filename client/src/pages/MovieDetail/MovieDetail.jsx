@@ -70,6 +70,10 @@ display:flex;
 margin: 5rem 10rem;
 align-items:center;
 justify-content:space-around;
+@media (max-width: 1500px){
+   display:block;
+   margin:2rem 2rem,;
+   }
 
 h3{
    font-size:1.8rem;

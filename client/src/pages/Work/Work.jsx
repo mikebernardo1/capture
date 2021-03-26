@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import {motion} from 'framer-motion';
 import {fade, pageAnimation, photoAnimation, lineAnimation, slider, sliderContainer} from '../../animation';
+import ScrollTop from '../../components/ScrollTop/ScrollTop'
 
 const Work = () => {
 
@@ -30,7 +31,8 @@ const Work = () => {
             <Frame4 variants={slider}></Frame4>
          </motion.div>
          {movies.data.map(movie=>(
-            <MovieStyle key={movie.id}>
+            <MovieStyle 
+            key={movie.id}>
                <motion.h2 variants={fade}>{movie.title}</motion.h2>
                <motion.div variants={lineAnimation} className="line"></motion.div>
                   <Link to={`/work/${movie.id}`}>
@@ -41,6 +43,7 @@ const Work = () => {
             </MovieStyle>
             )
             )}
+            <ScrollTop/>
       </WorkStyle>
    )
 }
@@ -49,12 +52,15 @@ const WorkStyle = styled(motion.div)`
    min-height: 100vh;
    overflow: hidden;
    padding: 5rem 10rem;
+   @media (max-width: 1300px){
+      padding:2rem 2rem;
+   }
    h2{
       padding: 1rem 0rem;
    }
 `
 
-const MovieStyle = styled.div`
+const MovieStyle = styled(motion.div)`
    padding-bottom:10rem;
    .line{
       height:0.5rem;

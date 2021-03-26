@@ -10,6 +10,7 @@ import MovieDetail from './pages/MovieDetail/MovieDetail';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {AnimatePresence} from 'framer-motion';
 
+
 export default function App() {
    return (
       <div className='App'>
